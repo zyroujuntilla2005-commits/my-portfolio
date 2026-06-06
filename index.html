@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zyrou Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+--purple:#2200CC;
+--bg:linear-gradient(135deg,#d9d8f8 0%,#f5f5f5 55%,#ffffff 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,sans-serif;background:#f5f5f5}
+nav{
+position:fixed;top:0;left:0;right:0;height:80px;z-index:1000;
+display:flex;justify-content:space-around;align-items:center;
+background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+}
+nav a{text-decoration:none;color:var(--purple);font-size:28px}
+nav a.active::after{content:" ●"}
+section{
+min-height:100vh;padding-top:80px;position:relative;
+display:flex;align-items:center;overflow:hidden;background:var(--bg);
+}
+.left,.right{width:50%;padding:4rem}
+.big{
+font-family:"Barlow Condensed",sans-serif;
+font-size:clamp(80px,10vw,180px);
+font-weight:900;color:var(--purple);line-height:.9;
+}
+.subtitle{color:var(--purple);font-size:28px}
+.blob{
+position:absolute;background:var(--purple);opacity:1;
+border-radius:45% 55% 65% 35%/45% 35% 65% 55%;
+}
+.homeblob{right:-100px;width:700px;height:500px}
+.aboutblob{left:-150px;width:550px;height:550px;top:220px}
+.profileblob{right:-100px;width:700px;height:400px}
+.photo{
+
+width:420px;height:550px;background:#ddd;border:4px dashed #999;
+display:flex;align-items:center;justify-content:center;
+font-size:24px;position:relative;z-index:2;margin:auto;
+}
+h2{
+font-family:"Barlow Condensed";font-size:110px;color:var(--purple)
+}
+p{font-size:22px;line-height:1.7;color:var(--purple)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.item b{display:block;color:var(--purple);font-size:26px}
+.item{color:var(--purple);font-size:20px}
+.skill{padding:25px 0;border-bottom:2px solid #6f5ce7}
+.skill h3{font-size:40px;color:var(--purple)}
+.skill p{font-size:20px}
+.contact-item{margin:40px 0;color:var(--purple);font-size:28px}
+.footerbar{position:absolute;bottom:0;left:0;right:0;height:40px;background:var(--purple)}
+section {
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#profile">PROFILE</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<section id="home">
+<div class="left">
+<div class="subtitle"><b>ZYROU V. JUNTILLA</b> &nbsp; BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</div>
+<div class="big">PERSONAL<br>PORTFOLIO</div>
+</div>
+<div class="right">
+<div class="blob homeblob"></div>
+<img src="profile.jpg" class="photo" style="object-fit:cover;">
+</div>
+<div class="footerbar"></div>
+</section>
+
+<section id="about">
+<div class="left">
+<div class="blob aboutblob"></div>
+<img src="about.jpg" class="photo" style="object-fit:cover;">
+</div>
+<div class="right">
+<h2>ABOUT ME</h2>
+<p><b>HELLO THERE!</b><br><br>
+I'm Zyrou Juntilla, a 3rd Year Bachelor of Science in Information Technology (BSIT) student at Davao del Norte State College. I am passionate about software development, web technologies, and creating innovative solutions that solve real-world problems.</p>
+</div>
+<div class="footerbar"></div>
+</section>
+
+<section id="profile">
+<div class="left">
+<div class="big">MY<br>PROFILE</div>
+<div class="grid">
+<div class="item"><b>NAME</b>Zyrou V. Juntilla</div>
+<div class="item"><b>LOCATION</b>New Pandan, Panabo City</div>
+<div class="item"><b>FOCUS</b>Front-End Development and System Documentation</div>
+<div class="item"><b>BACKGROUND</b>3rd Year BSIT Student</div>
+</div>
+</div>
+<div class="right">
+<div class="blob profileblob"></div>
+<img src="profile.jpg" class="photo" style="object-fit:cover;">
+</div>
+<div class="footerbar"></div>
+</section>
+
+<section id="projects">
+<div class="left">
+<div class="big">MY<br>PROJECTS</div>
+</div>
+<div class="right">
+<div class="skill"><h3>D.R.I.V.E.</h3><p>IoT Fuel Tracking System (Ongoing Capstone Project)</p><a href="" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>ThunderKicks</h3><p>An E-Commerce platform for selling shoes.</p><a href="men.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>Athlete's Haven</h3><p>A platform for selling athletic wear.</p><a href="bootstrap5.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+</div>
+<div class="footerbar"></div>
+</section>
+
+<section id="projects2">
+<div class="left">
+<div class="big">MORE<br>PROJECTS</div>
+</div>
+<div class="right">
+<div class="skill"><h3>AFICIONADO WEBSITE</h3><p>An online platform showcasing the perfumes of a local brand.</p><a href="AFICIONADO/PAGE 1/page 1.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Brochure</h3><p>Brochure for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Poster</h3><p>Poster for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Promotional Website</h3><p>Promotional website for KAIN App in Technopreneurship</p><a href="https://kain-tau.vercel.app/" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+</div>
+<div class="footerbar"></div>
+</section>
+
+<section id="contact">
+<div class="left">
+<div class="big">LET'S<br>CONNECT</div>
+</div>
+<div class="right">
+<div class="contact-item"><b>Email</b><br>juntilla.zyrou@dnsc.edu.ph</div>
+<div class="contact-item"><b>Phone</b><br>09550463474</div>
+<div class="contact-item"><b>Facebook</b><br>Zyrou Villacarlos Juntilla</div>
+</div>
+<div class="footerbar"></div>
+</section>
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+/* Click navigation */
+navLinks.forEach(link => {
+
+  link.addEventListener("click", e => {
+
+    e.preventDefault();
+
+    const target =
+      document.querySelector(
+        link.getAttribute("href")
+      );
+
+    window.scrollTo({
+      top: target.offsetTop,
+      behavior: "smooth"
+    });
+
+  });
+
+});
+
+/* Reveal animation */
+const observer =
+new IntersectionObserver((entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+      navLinks.forEach(link=>{
+        link.classList.remove("active");
+      });
+
+      const activeLink =
+        document.querySelector(
+          `nav a[href="#${entry.target.id}"]`
+        );
+
+      if(activeLink){
+        activeLink.classList.add("active");
+      }
+
+    }
+
+  });
+
+},{
+  threshold:0.5
+});
+
+sections.forEach(section=>{
+  observer.observe(section);
+});
+</script>
+</body>
+</html>
