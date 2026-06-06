@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aficionado | Stay Fresh & Confident</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffe5ec, #fdd0e0, #fcb8cc);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 10%;
+      background: url("background.png") center/cover no-repeat;
+      filter: brightness(105%);
+    }
+
+    /* Brand title */
+    .brand-title {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3em;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-family: 'Playfair Display', serif;
+      color: #4a2c2a;
+    }
+
+    /* Right side text*/
+    .text-section {
+      max-width: 550px;
+      text-align: right;
+      color: #3b2c2b;
+    }
+
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.8em;
+      color: #b03a5b;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1.05em;
+      line-height: 1.8;
+      color: #4b3a3a;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: #b03a5b;
+      border: 2px solid #b03a5b;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1em;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #912b47;
+      border-color: #912b47;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .brand-title {
+        font-size: 2.4em;
+      }
+
+      .text-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="hero">
+    <h1 class="brand-title">Aficionado</h1>
+
+    <div class="text-section">
+      <p class="tagline">Keep your freshness and confidence with Aficionado</p>
+      <p class="description">
+    Aficionado, a proudly Filipino fragrance brand, captures timeless elegance in every bottle. Offering luxurious yet affordable perfumes, 
+    body sprays, and colognes for all personalities, Aficionado empowers you to express confidence and sophistication wherever you go.
+      </p>
+      <a href="../PAGE%202/page%202.html" class="cta-btn">View Product</a>
+    </div>
+  </section>
+
+</body>
+</html>

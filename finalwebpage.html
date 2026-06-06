@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete's Haven</title>
+    <!-- cdn for bootstrap version 5 for css -->
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
+        crossorigin="anonymous"> </link>
+
+<!-- cdn for js if maggamit ug js version 1.16.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+<!-- stackpath bootstrap version 5-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+    <!-- Font awesome ni version 6.5.2 -->
+    <script src="https://kit.fontawesome.com/505f2f0670.js" 
+    crossorigin="anonymous"></script>
+    
+    <!--para ma connect ang html sa css -->
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+ <!-- Nav Bar For Logo and Store name -->
+    <nav id="nav" class="p-4 mb-3 col-lg-12 col-sm-12 col-md-12" >
+    <center>
+        <h1 style="font-style: italic;"><i class="fa-solid fa-cart-shopping"></i><b> <mark id="ath" >Athlete's</mark> <mark id="hav" > Haven</mark></b></h1> 
+    </center>
+        </nav>
+
+
+<body class="body col-sm-12 col-lg-12 col-md-12">
+    <!-- Sign up Form -->
+    <div id="divall" class="container d-flex justify-content-center col-sm-12 col-lg-12 col-md-12"  > 
+    <form id="form" >
+        <h3 id="h3"> <b>Sign Up Here</b></h3>
+    <div class="mb-3 mt-3">
+            <label for="username" class="form-label" style="color: white; text-shadow: red 5px; " >
+            <i class="fa fa-user" aria-hidden="true" style="color: white;"></i> Enter your Username/Email:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+        </div>
+    <div class="mb-3">
+            <label for="pwd" class="form-label" style="color:red;  font-size: 20px;">
+            <i class="fa fa-key" aria-hidden="true" style="color: red;"></i>Password:</label>
+            <input type="password" class="form-control border" id="pwd" placeholder="Enter password" name="pswd" required>
+        </div>
+      
+    <div class="form-check mb-3">
+            <label class="form-check-label" style="color: white;">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
+          </div>
+    <div>
+            <a href="bootstrap5.html" target="_blank" class="btn btn-danger btn-1" role="button" > <i class="fa fa-check" aria-hidden="true"></i> Submit</a>
+        </div>
+    </form>
+</div>
+ <!-- Contact Details-->
+    <div class="container d-flex text-align-center justify-content-center text-primary" style="font-size: 20px;">
+    Need Help? Contact us 
+        </div>
+    <div class="container d-flex text-align-center justify-content-center mt-3  " style="font-size: 15px; ">
+             <button style="background-color: black;" class=" btn-1"><a id="fb" href="https://www.facebook.com/zyrou.juntilla" target="_blank">FACEBOOK ACCOUNT: Zyrou Villacarlos Juntilla</a></button>
+        </div>
+    <div class="container d-flex text-align-center justify-content-center mt-3" style="font-size: 15px;">
+             <button style="background-color: black; color: red;" class=" btn-1">Phone Number: 09550463474</button>
+        </div> 
+
+
+</body>
+</html>

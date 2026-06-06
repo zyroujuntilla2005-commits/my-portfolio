@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Confirmation Page</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+         <!-- Bootstrap JavaScript Libraries -->
+         <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous"
+     ></script>
+
+     <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+         crossorigin="anonymous"
+     ></script>
+     <link rel="stylesheet" href="tab.css">
+     
+    </head>
+
+    <body>
+        <header>
+                <!-- Nav Bar For Logo and Store name -->
+                <nav id="nav" class="p-4 mb-3 col-lg-12 col-sm-12 col-md-12" >
+                    <center>
+                        <h1 style="font-style: italic;"><i class="fa-solid fa-cart-shopping"></i><b> <mark id="ath" >Athlete's</mark> <mark id="hav"> Haven</mark></b></h1> 
+                    </center>
+                </nav>
+        </header>
+        <main id="main">
+            <div class="invoice-box ms-5 col-lg-12 col-sm-12">
+                <center>
+                <h1>Confirm Order</h1>
+                </center>
+                  <!-- Store Logo-->
+                <img src="logoo.PNG"
+                style="width: 100%; max-width: 300px"
+                />
+                <!-- Store Name and Location-->
+                <h6>Athlete's Haven<br />
+                    Gredu likod sa Petron<br />
+                    Panabo City</h6 >   
+                <div class="container">
+                    <!-- Table-->
+                <table class="table table-striped ms-4" id="table">         
+                    <tr>
+                        <td id="td">Item</td>
+                        <td id="td">Price</td>
+                        <td id="td">Quantity</td>
+                    </tr>
+    
+                    <tr >
+                        <td>Precision 6</td>
+                        <td>₱500.00</td>
+                        <td>x1</td>
+                    </tr>
+    
+                    
+                    <tr >
+                        <td>Tshirt</td>
+                        <td>₱150</td>
+                        <td>x1</td>
+                    </tr>
+    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td id="td">Total: ₱650.00</td>
+                    </tr>
+                </table>
+                <!-- Buttons-->
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <button id="btn" class="btn btn-1" onclick="alert('Bought Successfully!')">Pay Now</button>
+                </div>
+                <div class="col-3"> 
+                    <a id="b" href="bootstrap5.html">
+                    <button  id="btn" class="btn btn-1" onclick="alert('Order Cancelled!')">Cancel Order</a></button>
+                </div>
+            </div>  
+            </div>
+
+            
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+       
+    </body>
+</html>

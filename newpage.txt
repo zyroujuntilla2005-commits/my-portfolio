@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aficionado Perfume Collection</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fff2f7, #ffe4ec);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d16d88;
+      font-size: 32px;
+      margin: 80px 0 40px;
+      text-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+    }
+
+    /* PRODUCT GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      width: 90%;
+      max-width: 1200px;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+      overflow: hidden;
+      text-align: center;
+      padding: 25px 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(255, 182, 193, 0.6);
+    }
+
+    .image-container {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      border-radius: 15px;
+      display: block;
+    }
+
+    /* PRICE AND SOLD UNDER IMAGE */
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .price-tag {
+      color: #d16d88;
+    }
+
+    .sold-tag {
+      color: #777;
+      font-weight: 500;
+    }
+
+    .product-info h3 {
+      color: #d16d88;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .quantity {
+      width: 60px;
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ffb6c1;
+      text-align: center;
+      margin: 10px 0 20px;
+      color: #d16d88;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background: #ff99b6;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff7ca3;
+    }
+
+    /* BACK BUTTON */
+    .back-btn-container {
+      text-align: center;
+      margin: 50px 0 70px;
+    }
+
+    .back-btn {
+      background: #ff99b6;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #ff7ca3;
+    }
+
+    /* FOOTER */
+    footer {
+      width: 100%;
+      background: #fff0f5;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ffd6e1;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .footer-container div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-container img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .socials img {
+      width: 25px;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .socials img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>AFFICIONADO COLLECTIONS</h2>
+
+  <div class="products">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="Design 1.png" alt="Aficionado Pink Blossom">
+      </div>
+      <div class="info-row">
+        <div class="price-tag">₱399</div>
+        <div class="sold-tag">20K+ Sold</div>
+      </div>
+      <div class="product-info">
+        <h3>Aficionado Pink Blossom (70ml)</h3>
+        <label>Quantity:</label><br>
+        <input type="number" min="1" class="quantity">
+      </div>
+      <div class="buttons">
+        <a href="page3.html"><button>View Details</button></a>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-container">
+        <img src="Design 2.png" alt="Aficionado Pure Dream">
+      </div>
+      <div class="info-row">
+        <div class="price-tag">₱399</div>
+        <div class="sold-tag">20K+ Sold</div>
+      </div>
+      <div class="product-info">
+        <h3>Aficionado Pure Dream (70ml)</h3>
+        <label>Quantity:</label><br>
+        <input type="number" min="1" class="quantity">
+      </div>
+      <div class="buttons">
+        <a href="page4.html"><button>View Details</button></a>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-container">
+        <img src="Design 3.png" alt="Aficionado Midnight Musk">
+      </div>
+      <div class="info-row">
+        <div class="price-tag">₱399</div>
+        <div class="sold-tag">20K+ Sold</div>
+      </div>
+      <div class="product-info">
+        <h3>Aficionado Midnight Musk (70ml)</h3>
+        <label>Quantity:</label><br>
+        <input type="number" min="1" class="quantity">
+      </div>
+      <div class="buttons">
+        <a href="page5.html"><button>View Details</button></a>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-container">
+        <img src="Design 4.png" alt="Aficionado Summer Bliss">
+      </div>
+      <div class="info-row">
+        <div class="price-tag">₱399</div>
+        <div class="sold-tag">20K+ Sold</div>
+      </div>
+      <div class="product-info">
+        <h3>Aficionado Summer Bliss (70ml)</h3>
+        <label>Quantity:</label><br>
+        <input type="number" min="1" class="quantity">
+      </div>
+      <div class="buttons">
+        <a href="page6.html"><button>View Details</button></a>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-btn-container">
+    <a href="page1.html" class="back-btn">⬅ Back</a>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div>📍 Philippines, 8105</div>
+      <div>✉️ scentAura@gmail.com</div>
+      <div>📞 +63 0912345678</div>
+      <div class="socials">
+        <img src="facebook.png" alt="Facebook">
+        <img src="instagram.png" alt="Instagram">
+        <img src="pinterest.png" alt="Pinterest">
+      </div>
+    </div>
+    <p>© 2025 ScentAura. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

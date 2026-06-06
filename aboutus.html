@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ScentAura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Reset & Body Styling --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align content to the top */
+            padding-bottom: 80px; /* Space for the fixed footer if you add one */
+
+            /* Background styling using your image */
+            background-image: url('Perfume .png'); /* Make sure this path is correct */
+            background-color: #ffe4ec; /* Fallback color */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Makes the background fixed */
+            background-repeat: no-repeat;
+        }
+
+        /* --- Header / Title --- */
+        h1 {
+            color: #d16d88;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 60px 0 30px;
+            text-shadow: 2px 2px 10px rgba(255, 192, 203, 0.6);
+            text-align: center;
+            padding: 0 20px;
+            max-width: 90%;
+        }
+
+        /* --- Introduction / Short Description --- */
+        .intro-section {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            border-radius: 15px;
+            padding: 30px 40px;
+            margin: 0 20px 50px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* --- Team Section --- */
+        .team-section {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        .member-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+            overflow: hidden;
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(255, 182, 193, 0.6);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+            border: 5px solid #ffb6c1; /* Pink border */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .member-card h3 {
+            color: #d16d88;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .member-card p {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .member-card .role {
+            font-weight: 600;
+            color: #ff7ca3;
+            margin-bottom: 10px;
+        }
+
+        /* --- Back Button (Optional - adjust href as needed) --- */
+        .back-btn-container {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 40px; /* Ensure space above footer */
+        }
+
+        .back-btn {
+            background: #ff99b6;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff7ca3;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+                margin-top: 40px;
+            }
+
+            .intro-section {
+                padding: 25px;
+                margin-bottom: 40px;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+
+            .team-section {
+                grid-template-columns: 1fr; /* Stack members on smaller screens */
+                gap: 30px;
+            }
+
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .member-card h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>About ScentAura</h1>
+
+    <div class="intro-section">
+        <p>
+            Welcome to ScentAura, where passion meets perfume! We are a dedicated team of fragrance enthusiasts committed to bringing you an exquisite collection of perfumes that capture the essence of every mood and moment. Our mission is to help you discover your signature scent and experience the transformative power of a truly beautiful fragrance.
+        </p>
+        <p>
+            Each bottle at ScentAura is carefully curated, ensuring quality, longevity, and a unique olfactory journey. We believe that perfume is more than just a scent—it's an expression of individuality, a memory in the making, and a touch of everyday luxury.
+        </p>
+    </div>
+
+    <div class="team-section">
+        <div class="member-card">
+            <img src="nawng.jpg" alt="Team Member 1" class="member-photo">
+            <h3>Kiethly Terona</h3>
+            <p class="role">Founder & CEO</p>
+            <p>Visionary behind ScentAura, with a keen nose for exquisite fragrances and a passion for personalized scent experiences.</p>
+        </div>
+        <div class="member-card">
+            <img src="nawng.jpg" alt="Team Member 2" class="member-photo">
+            <h3>Kiethly Terona</h3>
+            <p class="role">Head Perfumer</p>
+            <p>Our master perfumer, crafting unique blends and ensuring the highest quality in every bottle.</p>
+        </div>
+        <div class="member-card">
+            <img src="nawng.jpg" alt="Team Member 3" class="member-photo">
+            <h3>Kiethly Terona</h3>
+            <p class="role">Marketing Director</p>
+            <p>Bringing ScentAura's stories to life and connecting our beautiful fragrances with our community.</p>
+        </div>
+        <div class="member-card">
+            <img src="nawng.jpg" alt="Team Member 4" class="member-photo">
+            <h3>Kiethly Terona</h3>
+            <p class="role">Customer Relations</p>
+            <p>Ensuring every ScentAura customer has a delightful and seamless journey with their chosen perfumes.</p>
+        </div>
+    </div>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+</body>
+</html>

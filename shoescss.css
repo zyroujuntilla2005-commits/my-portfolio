@@ -1,0 +1,100 @@
+main{
+    background-color: red;
+}
+/* Navbar */
+#nav{
+    background-color: rgb(31, 31, 31); 
+    color: white;
+}
+/* Image Button Animation */
+.btn{
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    transition: .4s all;
+}
+.btn-1:hover{
+    transform:scale(1.1);
+    
+}    
+
+  /* Available Sizes */
+.sizes{
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black; 
+    background-color: white; 
+    color: black;
+}
+#sizes{
+    border: 1px solid black; 
+    background-color: white; 
+    color: black;   
+}
+#sizes:hover{
+    transform: scale(1.1);
+    transition: .5s ;
+}
+/* Add to cart button */
+#add{
+    background-color: white; 
+    color: black; 
+    height: 50px; 
+    width: 150px; 
+    border: 1px solid white;
+    font-size: 15px;
+}
+/* Buy Now button */
+#buy{
+    background-color: black; 
+    height: 50px; 
+    width: 150px; 
+    color: white;
+}
+/* Prices */
+#price{
+    background-color: white; 
+    color: black;
+    font-weight: bold;
+}
+/* Product Description */
+#label{
+    font-weight: bold; 
+    color: black; 
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+   
+  }
+  #a{
+    background-color: red;
+    color: black;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  #ath{
+    background-color: rgb(31, 31, 31); 
+    color: rgb(230, 28, 28);
+}
+#hav{
+    background-color: rgb(230, 28, 28); 
+    color: rgb(31, 31, 31);
+}
+#rec{
+    text-decoration: none;
+    color: white;
+}

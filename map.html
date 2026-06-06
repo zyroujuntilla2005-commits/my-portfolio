@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>World Map</title>
+  <style>
+    body {
+      background: #f4f7fa;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    h1 { 
+      margin-bottom: 20px; 
+    }
+    img {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>World Map</h1>
+  <p>Click on Brazil, Mexico, or Saudi Arabia to learn more!</p>
+
+
+  <img src="world map.jpg" alt="World Map" usemap="#worldmap" width="1240" height="768">
+
+  <map name="worldmap">
+    
+    <area shape="poly" coords="186,406,206,410,229,411,241,425,254,431,261,444,261,467,278,474,287,483,279,492,264,487,250,486,236,475,224,471,210,452,199,444,191,434" href="mexico.html" alt="Mexico">
+
+  
+    <area shape="poly" coords="370,500,400,500,430,530,420,560,390,570,360,540,350,520" href="brazil.html" alt="Brazil">
+
+    
+    <area shape="poly" coords="791,392,835,392,870,396,923,409,932,440,932,471,915,497,901,528,862,528,818,519,778,471,760,427,770,401" href="saudi arabia.html" alt="Saudi Arabia">
+  </map>
+</body>
+</html>
