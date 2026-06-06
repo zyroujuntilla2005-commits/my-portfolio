@@ -13,85 +13,153 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Barlow,sans-serif;background:#f5f5f5}
+
+/* NAV */
 nav{
-position:fixed;top:0;left:0;right:0;height:80px;z-index:1000;
+position:fixed;top:0;left:0;right:0;height:70px;z-index:1000;
 display:flex;justify-content:space-around;align-items:center;
-background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+background:rgba(255,255,255,.85);backdrop-filter:blur(10px);
 }
-nav a{text-decoration:none;color:var(--purple);font-size:28px}
+nav a{text-decoration:none;color:var(--purple);font-size:18px;font-weight:700;letter-spacing:1px}
 nav a.active::after{content:" ●"}
+
+/* hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1100}
+.hamburger span{display:block;width:26px;height:3px;background:var(--purple);border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+.nav-links{display:flex;justify-content:space-around;align-items:center;width:100%}
+
+/* SECTION BASE */
 section{
-min-height:100vh;padding-top:80px;position:relative;
+min-height:100vh;padding-top:70px;position:relative;
 display:flex;align-items:center;overflow:hidden;background:var(--bg);
+opacity:0;transform:translateY(80px);
+transition:opacity 0.8s ease,transform 0.8s ease;
 }
-.left,.right{width:50%;padding:4rem}
+section.show{opacity:1;transform:translateY(0)}
+
+.left,.right{width:50%;padding:3rem}
+
 .big{
 font-family:"Barlow Condensed",sans-serif;
-font-size:clamp(80px,10vw,180px);
+font-size:clamp(60px,9vw,160px);
 font-weight:900;color:var(--purple);line-height:.9;
 }
-.subtitle{color:var(--purple);font-size:28px}
+.subtitle{color:var(--purple);font-size:clamp(14px,2vw,24px)}
+
+/* BLOBS */
 .blob{
-position:absolute;background:var(--purple);opacity:1;
+position:absolute;background:var(--purple);
 border-radius:45% 55% 65% 35%/45% 35% 65% 55%;
 }
 .homeblob{right:-100px;width:700px;height:500px}
 .aboutblob{left:-150px;width:550px;height:550px;top:220px}
 .profileblob{right:-100px;width:700px;height:400px}
+
+/* PHOTO */
 .photo{
+width:380px;height:500px;background:#ddd;border:4px dashed #999;
+display:block;position:relative;z-index:2;margin:auto;
+}
 
-width:420px;height:550px;background:#ddd;border:4px dashed #999;
-display:flex;align-items:center;justify-content:center;
-font-size:24px;position:relative;z-index:2;margin:auto;
+h2{font-family:"Barlow Condensed";font-size:clamp(60px,9vw,110px);color:var(--purple)}
+p{font-size:clamp(16px,2vw,22px);line-height:1.7;color:var(--purple)}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
+.item b{display:block;color:var(--purple);font-size:clamp(16px,2vw,26px)}
+.item{color:var(--purple);font-size:clamp(14px,1.5vw,20px)}
+
+.skill{padding:20px 0;border-bottom:2px solid #6f5ce7}
+.skill h3{font-size:clamp(22px,3vw,40px);color:var(--purple)}
+.skill p{font-size:clamp(14px,1.5vw,20px)}
+
+.btn{
+display:inline-block;margin-top:12px;padding:10px 28px;
+background:var(--purple);color:#fff;
+font-family:"Barlow Condensed",sans-serif;font-size:18px;
+font-weight:700;text-decoration:none;letter-spacing:1px;
 }
-h2{
-font-family:"Barlow Condensed";font-size:110px;color:var(--purple)
-}
-p{font-size:22px;line-height:1.7;color:var(--purple)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
-.item b{display:block;color:var(--purple);font-size:26px}
-.item{color:var(--purple);font-size:20px}
-.skill{padding:25px 0;border-bottom:2px solid #6f5ce7}
-.skill h3{font-size:40px;color:var(--purple)}
-.skill p{font-size:20px}
-.contact-item{margin:40px 0;color:var(--purple);font-size:28px}
+
+.contact-item{margin:30px 0;color:var(--purple);font-size:clamp(18px,2.5vw,28px)}
 .footerbar{position:absolute;bottom:0;left:0;right:0;height:40px;background:var(--purple)}
-section {
-  min-height: 100vh;
-  opacity: 0;
-  transform: translateY(80px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+
+/* scroll snap */
+html{scroll-behavior:smooth}
+body{scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh}
+section{scroll-snap-align:start}
+
+/* ========== MOBILE ========== */
+@media(max-width:768px){
+
+  nav{justify-content:space-between;padding:0 20px}
+  .nav-links{
+    display:none;flex-direction:column;justify-content:center;align-items:center;
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background:rgba(255,255,255,.97);gap:30px;z-index:1000;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:28px}
+  .hamburger{display:flex}
+
+  section{
+    flex-direction:column;
+    padding-top:70px;
+    min-height:100vh;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* flip about section so image is on top */
+  #about{flex-direction:column-reverse}
+
+  .left,.right{
+    width:100%;
+    padding:1.5rem 1.2rem;
+    text-align:center;
+  }
+
+  .big{font-size:clamp(52px,16vw,90px)}
+
+  .photo{
+    width:220px;height:280px;
+    margin:0 auto;
+  }
+
+  .blob{display:none}
+
+  .grid{grid-template-columns:1fr;gap:16px;text-align:left}
+
+  h2{font-size:clamp(48px,14vw,80px)}
+
+  .skill{text-align:left}
+
+  .footerbar{height:24px}
+
+  .subtitle{font-size:14px}
 }
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-section {
-  scroll-snap-align: start;
+@media(max-width:400px){
+  .big{font-size:52px}
+  .photo{width:180px;height:240px}
 }
 </style>
 </head>
 <body>
 
 <nav>
-<a href="#home">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#profile">PROFILE</a>
-<a href="#projects">PROJECTS</a>
-<a href="#contact">CONTACT</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#profile">PROFILE</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
+  </div>
 </nav>
 
 <section id="home">
@@ -141,9 +209,9 @@ I'm Zyrou Juntilla, a 3rd Year Bachelor of Science in Information Technology (BS
 <div class="big">MY<br>PROJECTS</div>
 </div>
 <div class="right">
-<div class="skill"><h3>D.R.I.V.E.</h3><p>IoT Fuel Tracking System (Ongoing Capstone Project)</p><a href="" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
-<div class="skill"><h3>ThunderKicks</h3><p>An E-Commerce platform for selling shoes.</p><a href="men.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
-<div class="skill"><h3>Athlete's Haven</h3><p>A platform for selling athletic wear.</p><a href="bootstrap5.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>D.R.I.V.E.</h3><p>IoT Fuel Tracking System (Ongoing Capstone Project)</p><a href="" target="_blank" class="btn">SEE MORE</a></div>
+<div class="skill"><h3>ThunderKicks</h3><p>An E-Commerce platform for selling shoes.</p><a href="men.html" target="_blank" class="btn">SEE MORE</a></div>
+<div class="skill"><h3>Athlete's Haven</h3><p>A platform for selling athletic wear.</p><a href="bootstrap5.html" target="_blank" class="btn">SEE MORE</a></div>
 </div>
 <div class="footerbar"></div>
 </section>
@@ -153,10 +221,10 @@ I'm Zyrou Juntilla, a 3rd Year Bachelor of Science in Information Technology (BS
 <div class="big">MORE<br>PROJECTS</div>
 </div>
 <div class="right">
-<div class="skill"><h3>AFICIONADO WEBSITE</h3><p>An online platform showcasing the perfumes of a local brand.</p><a href="AFICIONADO/PAGE 1/page 1.html" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
-<div class="skill"><h3>K.A.I.N. Brochure</h3><p>Brochure for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
-<div class="skill"><h3>K.A.I.N. Poster</h3><p>Poster for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
-<div class="skill"><h3>K.A.I.N. Promotional Website</h3><p>Promotional website for KAIN App in Technopreneurship</p><a href="https://kain-tau.vercel.app/" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 28px;background:var(--purple);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-decoration:none;letter-spacing:1px;">SEE MORE</a></div>
+<div class="skill"><h3>AFICIONADO WEBSITE</h3><p>An online platform showcasing the perfumes of a local brand.</p><a href="AFICIONADO/PAGE 1/page 1.html" target="_blank" class="btn">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Brochure</h3><p>Brochure for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" class="btn">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Poster</h3><p>Poster for KAIN App in Technopreneurship</p><a href="https://canva.link/7s8jth36aga6dvs" target="_blank" class="btn">SEE MORE</a></div>
+<div class="skill"><h3>K.A.I.N. Promotional Website</h3><p>Promotional website for KAIN App in Technopreneurship</p><a href="https://kain-tau.vercel.app/" target="_blank" class="btn">SEE MORE</a></div>
 </div>
 <div class="footerbar"></div>
 </section>
@@ -172,65 +240,44 @@ I'm Zyrou Juntilla, a 3rd Year Bachelor of Science in Information Technology (BS
 </div>
 <div class="footerbar"></div>
 </section>
+
 <script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+// Hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-/* Click navigation */
-navLinks.forEach(link => {
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  navLinks.classList.toggle("open");
+});
 
+// Close menu when a link is clicked
+navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", e => {
-
     e.preventDefault();
-
-    const target =
-      document.querySelector(
-        link.getAttribute("href")
-      );
-
-    window.scrollTo({
-      top: target.offsetTop,
-      behavior: "smooth"
-    });
-
+    hamburger.classList.remove("open");
+    navLinks.classList.remove("open");
+    const target = document.querySelector(link.getAttribute("href"));
+    window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
   });
-
 });
 
-/* Reveal animation */
-const observer =
-new IntersectionObserver((entries)=>{
+// Reveal animation + active nav
+const sections = document.querySelectorAll("section");
+const links = document.querySelectorAll("nav a");
 
-  entries.forEach(entry=>{
-
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if(entry.isIntersecting){
-
       entry.target.classList.add("show");
-
-      navLinks.forEach(link=>{
-        link.classList.remove("active");
-      });
-
-      const activeLink =
-        document.querySelector(
-          `nav a[href="#${entry.target.id}"]`
-        );
-
-      if(activeLink){
-        activeLink.classList.add("active");
-      }
-
+      links.forEach(l => l.classList.remove("active"));
+      const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+      if(active) active.classList.add("active");
     }
-
   });
+}, { threshold: 0.3 });
 
-},{
-  threshold:0.5
-});
-
-sections.forEach(section=>{
-  observer.observe(section);
-});
+sections.forEach(s => observer.observe(s));
 </script>
 </body>
 </html>
